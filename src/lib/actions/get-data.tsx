@@ -8,7 +8,6 @@ export async function getData(slug: string) {
   const client = getStoryblokApi();
 
   const data = await client.get(`cdn/stories/${slug}`, sbParams);
-  console.time();
 
   return data.data.story;
 }
